@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>"Импульс"</title>
+    </head>
+    <body>
+        <h1>Список сотрудников компании "Импульс"</h1>
+        <p>{% for otdel in sotrydniki %}
+            <ol>
+                <p>{{otdel}}</p>
+                {% for sotrydnik in sotrydniki[otdel] %}
+                    <li>
+                        {{sotrydnik}} - {{sotrydniki[otdel][sotrydnik]}}
+                    </li>
+                {% endfor %}
+            </ol>
+            {% endfor %}
+        </p>
+    </body>
+</html>
